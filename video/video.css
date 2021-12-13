@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+}
+
+/* レスポンシブ用にwidthを設定をする,buttonを好きな位置に動かす */
+.video-box {
+    width: 80%;
+    max-width: 640px;
+    position: relative;
+}
+
+video,
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+/* ボタンの背景・ボーダーラインを消す・インラインボックス要素にする */
+
+#btn {
+    background: none;
+    border: none;
+    display: inline-block;
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+button.hidden {
+    display: none;
+}
+/* 親要素にホバーしたとき、再生ボタンを表示させる */
+
+.video-box:hover button.hidden {
+    display:inline-block;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>プログラミングの練習をしよう -なでしこ3-</title>
+  <style>
+    #result {
+      border: 1px solid #000;
+      padding: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>プログラミングの練習をしよう -なでしこ3-</h1>
+  <p><a href="https://nadesi.com/v3/doc/index.php?%E6%96%87%E6%B3%95&show" target="_blank" rel="noopener">なでしこ3のマニュアルはこちらから</a></p>
+
+  <div id="result"></div>
+
+  <script type="text/javascript" src="https://nadesi.com/v3/cdn.php?v=3.1.24&f=release/wnako3.js&run"></script>
+
+  <script type="なでしこ">
+    //配列
+    点数は[50, 70, 100, 42, 88,]
+
+    点数個数は点数の要素数。
+
+    //連想配列　オブジェクト
+    テスト= {
+      田中: 50,
+      斎藤: 70,
+      相沢: 100,
+      高橋: 42,
+      佐藤: 88
+    }
+
+    「#result」にテスト@「高橋」をHTML設定
+
+   /* 5回繰り返す
+
+    「#result」に点数[回数]をHTML設定
+  ここまで
+  */
+
+    //DOMスタイル
+    「#result」に{
+      "背景色": "#dfd",
+      "色": "#432",
+      "文字サイズ": "30px"
+  }をDOMスタイル一括設定
+  </script>
+</body></html>

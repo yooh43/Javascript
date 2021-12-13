@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>タブUIの作成～別の要素を操作する～</title>
+<link rel="stylesheet" href="../../common/main.css">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo"></div>
+        <h1 class="page-title">タブUIの作成～別の要素を操作する～</h1>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+
+        <!-- メインコンテンツ -->
+        <div class="tab-ui">
+            <ul class="tabs">
+                <li data-pair="tab1" class="tab active">材料</li>
+                <li data-pair="tab2" class="tab">調理方法</li>
+            </ul>
+            <div id="tab1" class="tabbox">
+                <dl>
+                    <dt>クリームチーズ</dt><dd>100g</dd>
+                    <dt>キャラメルソース</dt><dd>適量</dd>
+                    <dt>クルミ（砕いたもの）</dt><dd>適量</dd>
+                </dl>
+            </div>
+            <div id="tab2" class="tabbox hide">
+                <ol>
+                    <li>クリームチーズを皿に載せます。</li>
+                    <li>キャラメルソースをかけます。</li>
+                    <li>クルミを上からかけます。</li>
+                </ol>
+            </div>
+        </div>
+        <!-- メインコンテンツ -->
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <small>JavaScript Study Lab.</small>
+    </div>
+</footer>
+
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>

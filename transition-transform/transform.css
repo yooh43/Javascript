@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 50px;
+}
+
+/*斜め線を描く*/
+h1 span {
+    display: inline-block;
+}
+
+
+h1 span::before{
+    display: inline-block;
+    content: "";/*空間の領域を作る*/
+    width: 3px;
+    height: 1em;
+    background: #000;
+    vertical-align: bottom;
+    transform: skewX(45deg);
+    transform-origin: right bottom;/*transform(回転)の基準点の設定・起点を中心から右下へ移す*/
+}
+
+h1 span::after{
+    display: inline-block;
+    content: "";
+    width: 3px;
+    height: 1em;
+    background: #000;
+    vertical-align: bottom;
+    transform: skewX(-45deg);
+    transform-origin: right bottom;
+}
+
+.sea{
+    height: 400px;
+    background: aqua;
+}
+
+.seal{
+    transition: 1.5s transform;
+}
+
+.sea:hover .seal{
+    /*transform: translateX(500px);移動（X軸）+で右　-で左、*/
+    /*transform: translateX(500px) translateY(200px);斜め移動*/
+    /*transform: translateY(200px);移動（ｙ軸）+で上　-で下*/
+    /*transform: translate(500px,200px);斜め移動まとめて記述*/
+
+    /*transform: translateX(500px) rotate(360deg);移動して回転(書いた順番で動きが変わる)*/
+    /*transform: rotate(360deg);*/
+    /*transform: rotateX(180deg);回転　x軸を中心に回転*/
+    /*transform: rotateY(180deg);回転　y軸を中心に回転 */
+
+    /*transform: scale(.5);拡大・縮小　元サイズ：1、中心から拡縮する(ホバーしたときの要素を大きくする時によく使う)*/
+    /*transform: scaleX(.5);拡大・縮小x軸*/
+    /*transform: scaleY(.5);拡大・縮小y軸*/
+
+    /*transform: skew(45deg);傾斜させる deg(borderを使ってひし形や台形・斜線を作るとき)*/
+    /*transform: skewX(45deg);傾斜　X軸－左右の線が斜め*/
+    /*transform: skewY(45deg);傾斜　ｙ軸-上下の線が斜め*/
+    transform: skew(45deg,45deg);
+}

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.gallery {
+	width: 480px;
+}
+.bigimg-container, thumbs {
+	margin-bottom: 5px;
+	text-align: top;
+}
+.thumbs {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	display: flex;
+	justify-content: space-between;
+}
+.thumbs li {
+	width: 90px;
+}

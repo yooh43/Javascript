@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+header {
+    background: greenyellow;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+header .wrapper {
+    display: flex;
+    /* 上下左右中央に配置する */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+header a{
+    color: grey;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    
+    /*ふわっとしたアニメ*/
+
+    /* transition: 1s all ease-in-out 1s, 1s border ease-in-out 1s,; 複数のプロパティを指定する書き方*/
+    /* transition: 1s all ease-in-out 1s; 下記の設定をまとめた書き方*/
+    transition-duration:  1s;/*何秒かけて変化させるのか秒数指定*/
+    transition-property: all;/*変化させるプロパティの指定（文字色だけの場合はcolor;となる）*/
+    transition-timing-function: ease-in-out;/*変化の度合の設定*/
+    transition-delay: 1s;/*変化の開始時間をずらす設定*/
+
+
+}
+/* ホバーしたときに文字色、フォントサイズを変え下線を復活 */
+
+header a:hover{
+    color: lavender;
+    border-bottom: 1px solid; 
+    font-size: 28px;
+}
+/* h1の文字サイズは変えない */
+
+header h1 a:hover{
+    font-size: 32px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    font-size: 24px;
+}
+
+li+li {
+    margin-left: 1.5em;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO練習</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+
+<body>
+    <h1>動画を埋め込み</h1>
+    <div class="video-box">
+        <video id="movie" muted playsinline controls poster="thumb.jpg" preload="metadata">
+            <source src="bear.mov">
+            <source src="bear.mp4">
+            <p>この動画はお使いのブラウザーに対応していません</p>
+        </video>
+        <button id="btn" type="button">
+            <img src="on.png" alt="" id='btn-img'> 
+        </button>
+    </div>
+
+    <h2>音声ファイルの場合</h2>
+    <audio src="Jellyfish.mp3" id="bgm"></audio>
+    <button type="button" id="bgmBtn">BGM・再生</button>
+
+    <script src="video.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>トグルボタンの作成～DOM操作とイベント～</title>
+<link rel="stylesheet" href="../../common/main.css">
+<style>
+.setting {
+	display: flex;
+	align-items: center;
+}
+.btn {
+	margin-left: 1em;
+	width: 100px;
+	height: 40px;
+	border-radius: 4px;
+	background: url(images/toggle-switch.png) no-repeat;
+	background-size: 200px 40px;
+	background-position: top 0 left 0;
+	text-indent: -500px;
+}
+.on {
+	background-position: top 0 left -100px;
+}
+</style>
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<div class="logo"></div>
+        <h1 class="page-title">トグルボタンの作成～DOM操作とイベント～</h1>
+	</div>
+</header>
+
+<main>
+	<div class="container">
+
+		<!-- メインコンテンツ -->
+		<div>
+			<h3>セッティングパネル</h3>
+			<p class="setting">設定を保存する
+				<a href="#" id="toggle" class="btn">ボタン</a>
+			</p>
+		</div>
+		<!-- メインコンテンツ -->
+
+	</div>
+</main>
+
+<footer>
+	<div class="container">
+		<small>JavaScript Study Lab.</small>
+	</div>
+</footer>
+
+<script>
+'use strict';
+
+</script>
+</body>
+</html>

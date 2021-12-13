@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+}
+
+.sea {
+background: aqua;
+height: 600px;
+}
+
+/*@keyframes 動きをつける*/
+@keyframes swim{
+    0%{
+        transform: translateX(0) translateY(0) rotateY(180deg);
+    }
+
+    33%{
+        transform: translateX(800%) translateY(0) rotateY(180deg);
+    }
+
+    34%{
+        transform: translateX(800%) translateY(0) rotateY(0);
+    }
+
+    64%{
+        transform: translateX(0) translateY(400%)rotateY(0);
+    }
+    
+    66%{
+        transform: translateX(0) translateY(400%) rotateY(0);
+    }
+    67%{
+        transform: translateX(0) translateY(400%) rotateY(180deg);
+    }
+    100%{
+        transform: translateX(800%) translateY(400%) rotateY(180deg);
+    }
+
+}
+/*animation 指定*/
+.seal {
+    animation-name: swim;/*実行したいkeyframesを指定*/
+    animation-duration: 10s;
+    animation-timing-function: steps(5);/*変化の度合い*/
+    animation-delay: 2s;/*開始時間をずらす*/
+    animation-iteration-count: 1;/*繰り返す数を指定 infinite:無限*/
+    /*animation-direction: alternate;再生方法の指定*/
+    animation-fill-mode: forwards;/*開始時と終了時の設定*/
+    animation-play-state: running;/*再生状態にする*/
+}
+
+.seal:hover{
+    animation-play-state: paused;/*ホバーしたら一時停止*/
+}
